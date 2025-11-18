@@ -8,43 +8,61 @@
     <link rel="stylesheet" href="style.css" />
 
     <!-- Highlight.js -->
-    <link rel="stylesheet" href="lib/styles/github.min.css" />
+    <link rel="stylesheet" href="lib/styles/atom-one-dark.min.css" />
     <script src="lib/highlight.min.js"></script>
 
     <!-- Marked.js -->
     <script src="lib/marked.min.js"></script>
+
+    <!-- APP -->
     <script src="app.js" defer></script>
   </head>
 
   <body>
     <div id="container">
       <!-- ======================
-         SIDEBAR IZQUIERDA PRO
-    ======================= -->
+           SIDEBAR IZQUIERDA
+      ======================= -->
       <aside id="sidebar">
         <h2>📘 Minicursos</h2>
 
         <button class="curso-btn" data-target="mc1">Minicurso 1 – REPL</button>
         <ul class="lecciones" id="mc1">
-          <li data-path="minicurso-1-repl/lesson-1.md">Lección 1</li>
-          <li data-path="minicurso-1-repl/lesson-2.md">Lección 2</li>
-          <li data-path="minicurso-1-repl/lesson-3.md">Lección 3</li>
+          <li data-path="minicurso-1-repl/lesson-1.md">
+            Introducción al REPL de Node.js
+          </li>
+          <li data-path="minicurso-1-repl/lesson-2.md">
+            Comandos Especiales y Atajos del REPL
+          </li>
+          <li data-path="minicurso-1-repl/lesson-3.md">Debugging con REPL</li>
         </ul>
 
         <button class="curso-btn" data-target="mc2">Minicurso 2 – NPM</button>
         <ul class="lecciones" id="mc2">
-          <li data-path="minicurso-2-npm/lesson-1.md">Lección 1</li>
-          <li data-path="minicurso-2-npm/lesson-2.md">Lección 2</li>
-          <li data-path="minicurso-2-npm/lesson-3.md">Lección 3</li>
+          <li data-path="minicurso-2-npm/lesson-1.md">
+            Introducción a NPM - El Gestor de Paquetes de Node.js
+          </li>
+          <li data-path="minicurso-2-npm/lesson-2.md">
+            Gestión Avanzada de Dependencias con NPM
+          </li>
+          <li data-path="minicurso-2-npm/lesson-3.md">
+            Publicar y Compartir Paquetes NPM
+          </li>
         </ul>
 
         <button class="curso-btn" data-target="mc3">
           Minicurso 3 – Módulos
         </button>
         <ul class="lecciones" id="mc3">
-          <li data-path="minicurso-3-modules/lesson-1.md">Lección 1</li>
-          <li data-path="minicurso-3-modules/lesson-2.md">Lección 2</li>
-          <li data-path="minicurso-3-modules/lesson-3.md">Lección 3</li>
+          <li data-path="minicurso-3-modules/lesson-1.md">
+            Visión General de los Módulos Core
+          </li>
+          <li data-path="minicurso-3-modules/lesson-2.md">
+            Módulos File System y Path
+          </li>
+          <li data-path="minicurso-3-modules/lesson-3.md">
+            Módulos HTTP y URL
+          </li>
         </ul>
 
         <button class="curso-btn" data-target="mc4">
@@ -84,21 +102,20 @@
         </ul>
       </aside>
 
-      <!-- ==========================================
-         TOC DERECHA — Navegación al estilo Notion
-    =========================================== -->
-      <aside id="toc">
-        <h3>En esta lección</h3>
-        <ul id="toc-list"></ul>
-      </aside>
-
-      <!-- ===========================
-         CONTENIDO CENTRAL
-    ============================ -->
+      <!-- ======================
+           CONTENIDO + TOC
+      ======================= -->
       <main id="content">
-        <div class="markdown-body" id="markdown-container">
-          <h1>Bienvenido 👋</h1>
-          <p>Selecciona una lección del panel izquierdo.</p>
+        <div id="content-inner">
+          <div class="markdown-body" id="markdown-container">
+            <h1>Bienvenido 👋</h1>
+            <p>Selecciona una lección del panel izquierdo.</p>
+          </div>
+
+          <aside id="toc">
+            <h3>En esta lección</h3>
+            <ul id="toc-list"></ul>
+          </aside>
         </div>
       </main>
     </div>
