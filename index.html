@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Minicursos Node.js</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Librería de render Markdown -->
+    <script src="lib/marked.min.js"></script>
+
+    <!-- Highlight.js -->
+    <link rel="stylesheet" href="lib/styles/github.min.css" />
+    <script src="lib/highlight.min.js"></script>
+
+    <script>
+      // Activar highlight.js una vez cargue el DOM
+      document.addEventListener("DOMContentLoaded", () => {
+        marked.setOptions({
+          highlight: (code, lang) => {
+            return hljs.highlightAuto(code).value;
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <!-- ============================
+         NAV LATERAL
+    ============================= -->
+      <nav id="sidebar">
+        <h2>📚 Minicursos</h2>
+
+        <ul class="curso">
+          <li>
+            <button class="curso-btn">Minicurso 1 – REPL</button>
+            <ul class="lecciones">
+              <li data-path="minicurso-1-repl/lesson-1.md">Lección 1</li>
+              <li data-path="minicurso-1-repl/lesson-2.md">Lección 2</li>
+              <li data-path="minicurso-1-repl/lesson-3.md">Lección 3</li>
+            </ul>
+          </li>
+
+          <li>
+            <button class="curso-btn">Minicurso 2 – NPM</button>
+            <ul class="lecciones">
+              <li data-path="minicurso-2-npm/lesson-1.md">Lección 1</li>
+              <li data-path="minicurso-2-npm/lesson-2.md">Lección 2</li>
+              <li data-path="minicurso-2-npm/lesson-3.md">Lección 3</li>
+            </ul>
+          </li>
+
+          <li>
+            <button class="curso-btn">Minicurso 3 – Modules</button>
+            <ul class="lecciones">
+              <li data-path="minicurso-3-modules/lesson-1.md">Lección 1</li>
+              <li data-path="minicurso-3-modules/lesson-2.md">Lección 2</li>
+              <li data-path="minicurso-3-modules/lesson-3.md">Lección 3</li>
+            </ul>
+          </li>
+
+          <li>
+            <button class="curso-btn">Minicurso 4 – Event Loop</button>
+            <ul class="lecciones">
+              <li data-path="minicurso-4-eventloop/lesson-1.md">Lección 1</li>
+              <li data-path="minicurso-4-eventloop/lesson-2.md">Lección 2</li>
+              <li data-path="minicurso-4-eventloop/lesson-3.md">Lección 3</li>
+            </ul>
+          </li>
+
+          <li>
+            <button class="curso-btn">Minicurso 5 – Event Emitters</button>
+            <ul class="lecciones">
+              <li data-path="minicurso-5-eventemitters/lesson-1.md">
+                Lección 1
+              </li>
+              <li data-path="minicurso-5-eventemitters/lesson-2.md">
+                Lección 2
+              </li>
+              <li data-path="minicurso-5-eventemitters/lesson-3.md">
+                Lección 3
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <button class="curso-btn">Minicurso 6 – Streams</button>
+            <ul class="lecciones">
+              <li data-path="minicurso-6-streams/lesson-1.md">Lección 1</li>
+              <li data-path="minicurso-6-streams/lesson-2.md">Lección 2</li>
+              <li data-path="minicurso-6-streams/lesson-3.md">Lección 3</li>
+            </ul>
+          </li>
+
+          <li>
+            <button class="curso-btn">Minicurso 7 – Error Handling</button>
+            <ul class="lecciones">
+              <li data-path="minicurso-7-errorhandling/lesson-1.md">
+                Lección 1
+              </li>
+              <li data-path="minicurso-7-errorhandling/lesson-2.md">
+                Lección 2
+              </li>
+              <li data-path="minicurso-7-errorhandling/lesson-3.md">
+                Lección 3
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- ============================
+         CONTENIDO
+    ============================= -->
+      <main id="content">
+        <h1>Bienvenido a los Minicursos</h1>
+        <p>Selecciona una lección del menú izquierdo para comenzar ✨</p>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
