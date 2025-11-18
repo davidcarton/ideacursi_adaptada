@@ -40,7 +40,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* Botones de cursos */
 .curso-btn {
   width: 100%;
   padding: 12px;
@@ -58,7 +57,6 @@ body {
   background: #374151;
 }
 
-/* Submenú de lecciones */
 .lecciones {
   margin-bottom: 12px;
   padding-left: 20px;
@@ -91,19 +89,16 @@ body {
   padding: 32px 40px;
 }
 
-/*
-   NUEVO SISTEMA DE CONTENIDO:
-   Contenedor ancho, TOC pegado a la derecha.
-*/
+/* Contenedor del contenido */
 #content-inner {
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding-right: 20px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Bloque principal estilo documento */
+/* ------------------------------------------------------
+   BLOQUE PRINCIPAL (DOCUMENTO)
+------------------------------------------------------ */
 .markdown-body {
   background: #ffffff;
   padding: 40px;
@@ -140,7 +135,7 @@ body {
   margin-top: 30px;
 }
 
-/* Listas y párrafos */
+/* Párrafos y listas */
 .markdown-body p {
   margin: 16px 0;
 }
@@ -155,10 +150,8 @@ body {
 }
 
 /* ------------------------------------------------------
-   CÓDIGO – Notion + highlight.js
+   INLINE CODE
 ------------------------------------------------------ */
-
-/* Inline code */
 .markdown-body p code,
 .markdown-body li code,
 .markdown-body table code,
@@ -170,22 +163,21 @@ body {
   color: #111827;
 }
 
-/* Bloque de código */
+/* ------------------------------------------------------
+   BLOQUE DE CÓDIGO (compatible con highlight.js)
+------------------------------------------------------ */
 .markdown-body pre {
-  background: #1e1e1e;
-  padding: 18px;
+  background: #fafafa !important; /* ✔ fondo claro */
+  border: 1px solid #e5e7eb;
+  padding: 16px;
   border-radius: 10px;
   overflow-x: auto;
   margin: 22px 0;
-  border: 1px solid #333;
 }
 
-/* highlight aplica los colores */
 .markdown-body pre code {
-  background: none !important;
-  padding: 0;
-  border-radius: 0;
-  color: inherit;
+  background: transparent !important;
+  color: #111 !important;
   font-size: 15px;
   display: block;
 }
@@ -225,22 +217,17 @@ body {
 ------------------------------------------------------ */
 #toc {
   width: 240px;
-  min-width: 240px;
-  max-width: 240px;
-
+  position: fixed;
+  right: 20px;
+  top: 80px;
   background: #ffffff;
   padding: 20px;
-  border-left: 1px solid #e5e7eb;
-
-  position: sticky;
-  top: 40px;
-  max-height: calc(100vh - 80px);
-  overflow-y: auto;
-
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-
-  margin-left: 20px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  z-index: 10;
 }
 
 #toc h3 {
@@ -277,15 +264,15 @@ body {
    RESPONSIVE
 ------------------------------------------------------ */
 @media (max-width: 1100px) {
-  #content-inner {
-    flex-direction: column;
-  }
-
   #toc {
     position: static;
     max-height: none;
     width: 100%;
     margin-top: 20px;
+  }
+
+  #content-inner {
+    margin: 0 auto;
   }
 }
 
